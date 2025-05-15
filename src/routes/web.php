@@ -14,13 +14,13 @@ use App\Http\Controllers\ContactController;
 |
 */
 
-Route::get('/register', [ContactController::class, 'register']);
-Route::get('/mypage/profile', [ContactController::class, 'profile']);
+Route::get('/', [ContactController::class, 'index']);
+Route::post('/register', [ContactController::class, 'newUser']);
+Route::post('/mypage/profile', [ContactController::class, 'newProfile']);
+Route::post('/login', [ContactController::class, 'loginUser']);
 
 
-//Route::get('/login', [ContactController::class, 'login']);
-Route::middleware('auth')->group(function () {
-        Route::get('/', [ContactController::class, 'top']);
-    });
-//Route::get('/', [ContactController::class, 'top']);
-Route::post('/mypage/profile', [ContactController::class, 'profile']);
+
+//Route::middleware('auth')->group(function () {
+//        Route::get('/', [ContactController::class, 'index']);
+//    });

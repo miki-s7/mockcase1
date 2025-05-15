@@ -30,10 +30,15 @@ class FortifyServiceProvider extends ServiceProvider
     {
         Fortify::createUsersUsing(CreateNewUser::class);
         Fortify::registerView(function () {
-            return view('register');
+            return view('auth.register');
         });
         Fortify::loginView(function () {
-            return view('login');
+            return view('auth.login');
+        });
+        RateLimiter::for('login', function (Request $request) {
+            $email = (string) $request->email;
+
+            return Limit::perMinute(10)->by($email . $request->ip());
         });
         //Fortify::updateUserProfileInformationUsing(UpdateUserProfileInformation::class);
         //Fortify::updateUserPasswordsUsing(UpdateUserPassword::class);
