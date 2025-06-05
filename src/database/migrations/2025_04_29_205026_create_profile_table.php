@@ -13,9 +13,9 @@ class CreateProfileTable extends Migration
      */
     public function up()
     {
-        Schema::create('profile', function (Blueprint $table) {
+        Schema::create('profiles', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained()->cascadeOnDelete();;
+            $table->foreignId('user_id')->constrained()->cascadeOnDelete();
             $table->string('photo');
             $table->string('postcode');
             $table->string('address');
@@ -31,6 +31,6 @@ class CreateProfileTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('profile');
+        Schema::dropIfExists('profiles');
     }
 }

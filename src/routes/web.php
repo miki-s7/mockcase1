@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ContactController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,13 +14,15 @@ use App\Http\Controllers\ContactController;
 |
 */
 
-Route::get('/', [ContactController::class, 'index']);
-Route::post('/register', [ContactController::class, 'newUser']);
-Route::post('/mypage/profile', [ContactController::class, 'newProfile']);
-Route::post('/login', [ContactController::class, 'loginUser']);
+Route::post('/register', [UserController::class, 'newUser']);
+Route::get('/mypage/profile', [UserController::class, 'profile']);
+Route::post('/mypage/profile', [UserController::class, 'newProfile']);
+Route::get('/', [UserController::class, 'index']);
+
+Route::post('/login', [UserController::class, 'loginUser']);
 
 
 
 //Route::middleware('auth')->group(function () {
-//        Route::get('/', [ContactController::class, 'index']);
+//        Route::get('/', [UserController::class, 'index']);
 //    });

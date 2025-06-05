@@ -3,11 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ asset('css/login.css') }}" />
     <title>ログイン画面</title>
 </head>
 <body>
     <header>
-
+        <div>
+            
+        </div>
     </header>
     <main>
         <h2>ログイン</h2>
