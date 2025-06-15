@@ -20,13 +20,5 @@ class UsersTableSeeder extends Seeder
             'password' => '0000'
         ];
         DB::table('users')->insert($user);
-        $profile=[
-            'user_id'=>1,
-            'photo' => 'xxx.jpeg',
-            'postcode' => '1234567',
-            'address' => '東京都新宿区',
-            'building' => '〇〇ビル101'
-        ];
-        DB::table('profile')->insert($profile);
     }
 }
