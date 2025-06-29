@@ -1,0 +1,84 @@
+body {
+    margin: 0 auto;
+}
+
+.header {
+    background: #000;
+    margin: 0 auto;
+    align-items: center;
+    padding: 20px 15px;
+}
+
+
+.contact-form__content {
+    margin: 0 20%;
+    padding: 30px 15px;
+}
+
+.contact-form__heading {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.form {
+    margin: 0 auto;
+    width: 70%;
+    text-align: left;
+}
+
+.form__error {
+    height: 20px;
+    color: #ff0000;
+    text-align: left;
+}
+
+h3 {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.form__input--checkbox {
+    margin: 20px;
+}
+label {
+    margin: 5px;
+}
+
+label input {
+    display: none;
+    margin-bottom: 20px;
+}
+
+label span {
+    color: #ff6e6e;
+    border: 1.5px solid #ff6e6e;
+    border-radius: 20px;
+    padding: 5px 20px;
+}
+
+label input:checked+span {
+    color: #FFF;
+    background: #ff6e6e;
+    border: 1px solid #ff6e6e;
+}
+
+
+select,input,textarea {
+    padding: 10px;
+    width: 100%;
+}
+
+.form__button {
+    margin-top: 30px;
+}
+
+.form__button-submit {
+    padding: 10px;
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 3px;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+}

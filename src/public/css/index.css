@@ -1,5 +1,62 @@
+body {
+    margin: 0 auto;
+}
+
+.header {
+    background: #000;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    padding: 20px 15px;
+}
+
+nav {
+    text-align: right;
+}
+
+ul {
+    display: flex;
+    color: #fff;
+}
+
+li {
+    list-style: none;
+    padding: 0 10px;
+}
+
+main {
+    margin: 0 10%;
+    width: 80%;
+}
+
+.list {
+    display: flex;
+}
+
+.list div {
+    margin-right: 5%;
+}
+
+.products {
+    margin: 20px auto;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
 .item {
+    margin: 2%;
+    margin-right: 5%;
+    margin-bottom: 20px;
     width: 20%;
-    /*height: 20%;*/
+}
+
+.item-photo {
     background-color: gray;
+    height: 80px;
+}
+
+.item:nth-child(3n) {
+    margin-right: 0;
 }

@@ -22,7 +22,9 @@ Route::get('/', [UserController::class, 'index']);
 Route::post('/login', [UserController::class, 'loginUser']);
 
 
-
+Route::get('/sell', function () {
+    return view('sell');
+});
 //Route::middleware('auth')->group(function () {
 //        Route::get('/', [UserController::class, 'index']);
 //    });

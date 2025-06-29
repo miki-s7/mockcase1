@@ -7,18 +7,29 @@
     <title>商品一覧画面</title>
 </head>
 <body>
-    <header>
-
+    <header class="header">
+        <img src="./img/logo.svg" alt="" />
+        <nav>
+            <ul>
+                <li>ログアウト</li>
+                <li>マイページ</li>
+                <li><a href="sell.blade.php">出品</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
         <h2></h2>
-        <div>
+        <div class="list">
             <div>おすすめ</div>
             <div>マイリスト</div>
         </div>
-        <div>
-            <div>
-                <div class="item">商品画像</div>
+        <div class="products">
+            <div class="item">
+                <div class="item-photo">商品画像</div>
+                <div>商品名</div>
+            </div>
+            <div class="item">
+                <div class="item-photo">商品画像</div>
                 <div>商品名</div>
             </div>
         </div>
