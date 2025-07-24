@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\SellController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,10 +23,13 @@ Route::get('/', [UserController::class, 'index']);
 
 Route::post('/login', [UserController::class, 'loginUser']);
 
+Route::get('/sell', [CategoryController::class, 'category']);
+Route::post('/sell', [SellController::class, 'sell']);
+Route::get('/', [SellController::class, 'index']);
 
-Route::get('/sell', function () {
-    return view('sell');
-});
+//Route::get('/sell', function () {
+  //  return view('sell');
+//});
 //Route::middleware('auth')->group(function () {
 //        Route::get('/', [UserController::class, 'index']);
 //    });

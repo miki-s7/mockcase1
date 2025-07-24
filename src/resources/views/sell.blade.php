@@ -15,7 +15,7 @@
     <main class="contact-form__content contact-form__heading">
         <h2>商品の出品</h2>
 
-        <form class="form" action="" method="post">
+        <form class="form" action="/sell" method="post">
             @csrf
             <div>
                 <h3>商品画像</h3>
@@ -25,15 +25,17 @@
             <h2>商品名の詳細</h2>
             <h3>カテゴリー</h3>
             <div class="form__input--checkbox">
-                <label><input type="checkbox" value="ファッション" name="category"><span>ファッション</span></label>
-                <label><input type="checkbox" value="家電" name="category"><span>家電</span></label>
-                <label><input type="checkbox" value="インテリア" name="category"><span>インテリア</span></label>
+                @foreach ($categories as $category)
+                <label><input type="checkbox" value="{{$category->id}}" name="category"><span>{{$category->name}}</span></label>
+                @endforeach
             </div>
             <div>
                 <h3>商品の状態</h3>
                 <select class="condition" name='condition'>
-                    <option value='good'>良い</option>
-                    <option value='bad'>悪い</option>
+                    <option value='good'>良好</option>
+                    <option value='bad'>目立った傷や汚れなし</option>
+                    <option value='bad'>やや傷や汚れあり</option>
+                    <option value='bad'>状態が悪い</option>
                 </select>
             </div>
             <h2>商品名と説明</h2>
@@ -44,12 +46,12 @@
             </div>
             <div>
                 <h3>ブランド名</h3>
-                <input type="text" name="bland" value="{{ old('bland') }}" />
+                <input type="text" name="brand" value="{{ old('brand') }}" />
                 <div class="form__error"></div>
             </div>
             <div>
                 <h3>商品の説明</h3>
-                <textarea type="content" value="{{ old('content') }}"></textarea>
+                <textarea type="content" name="content" value="{{ old('content') }}"></textarea>
                 <div class="form__error"></div>
             </div>
             <div>

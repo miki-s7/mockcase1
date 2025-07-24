@@ -8,5 +8,13 @@
 </head>
 <body>
     商品詳細画面
+    <div>
+        <div class="item-photo">{{$product->img}}</div>
+    </div>
+    <div>
+        <div>
+            
+        </div>
+    </div>
 </body>
 </html>

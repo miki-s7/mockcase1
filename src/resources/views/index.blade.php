@@ -13,7 +13,7 @@
             <ul>
                 <li>ログアウト</li>
                 <li>マイページ</li>
-                <li><a href="sell.blade.php">出品</a></li>
+                <li><a href="/sell">出品</a></li>
             </ul>
         </nav>
     </header>
@@ -25,12 +25,10 @@
         </div>
         <div class="products">
             <div class="item">
-                <div class="item-photo">商品画像</div>
-                <div>商品名</div>
-            </div>
-            <div class="item">
-                <div class="item-photo">商品画像</div>
-                <div>商品名</div>
+                @foreach ($products as $product)
+                <div class="item-photo">{{$product->img}}</div>
+                <div>{{$product->name}}</div>
+                @endforeach
             </div>
         </div>
     </main>
